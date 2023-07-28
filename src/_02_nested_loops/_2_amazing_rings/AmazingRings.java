@@ -12,6 +12,7 @@ import processing.core.PImage;
  * In the setup() method:
  * 2. Set the size of your window to be a rectangle like in the recipe
  *    demonstration
+ *   
  * 3. Call the noFill() command so all the ellipses will be transparent
  *
  * In the draw() method:
@@ -25,7 +26,7 @@ import processing.core.PImage;
  * 6. When the rings reach the right side of the sketch, reverse the direction
  *    so they move
  *    Hint: speed = -speed
-      
+
  * 7. When the rings reach the left side of the sketch, reverse the direction
  *    again.
  * 
@@ -37,27 +38,39 @@ import processing.core.PImage;
  *    These rings must also "bounce" off the sides of the window.
  */
 public class AmazingRings extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
+	static final int WIDTH = 800;
+	static final int HEIGHT = 600;
+	int x=200;
+	int y=300;
+	int speed=15;
 
-    PImage waldo;
+	@Override
+	public void settings() {
+		size(800,600);
+	}
 
-    @Override
-    public void settings() {
+	@Override
+	public void setup() {
 
-    }
+		noFill();
+	}
 
-    @Override
-    public void setup() {
+	@Override
+	public void draw() {
+		background(255,255,255);
+		for(int j=25;j>0 ;j--) {
+			ellipse(x,y,j*15,j*15);
+}
+		x=x+speed;
+		if(x>WIDTH) {
+			speed=-speed;
+		}
+		if(x<0) {
+			speed=-speed;
+		}
+	}
 
-    }
-
-    @Override
-    public void draw() {
-
-    }
-
-    static public void main(String[] args) {
-        PApplet.main(AmazingRings.class.getName());
-    }
+	static public void main(String[] args) {
+		PApplet.main(AmazingRings.class.getName());
+	}
 }
