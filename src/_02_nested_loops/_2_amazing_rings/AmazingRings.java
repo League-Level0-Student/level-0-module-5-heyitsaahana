@@ -43,6 +43,9 @@ public class AmazingRings extends PApplet {
 	int x=200;
 	int y=300;
 	int speed=15;
+	int r=600;
+	int l=300;
+	int pace=15;
 
 	@Override
 	public void settings() {
@@ -60,14 +63,25 @@ public class AmazingRings extends PApplet {
 		background(255,255,255);
 		for(int j=25;j>0 ;j--) {
 			ellipse(x,y,j*15,j*15);
-}
+		}
 		x=x+speed;
 		if(x>WIDTH) {
 			speed=-speed;
 		}
 		if(x<0) {
-			speed=-speed;
+		speed=-speed;
+	}
+		for(int m=25;m>0;m--) {
+			ellipse(r,l,m*15,m*15);
 		}
+			r=r-pace;
+			if(r>WIDTH) {
+				pace=-pace;
+			}
+			if(r<0) {
+				pace=-pace;
+			}
+		
 	}
 
 	static public void main(String[] args) {
