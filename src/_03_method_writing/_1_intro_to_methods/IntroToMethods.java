@@ -47,19 +47,37 @@ public class IntroToMethods {
 		System.out.println("Method1");
 	}
 
+
+	
+	//method name:method1
+//return type:void 
+//Parameters:none
 	public static String method2() {
 		return "Method2";
 	}
+	//method name:method2
+	//return type:String 
+	//parameters:none
+	
 
 	public static void method3(String message) {
 		System.out.println("Method3");
 	}
+	//method name:method3
+	//return type:void
+	//parameters:String message
 
 	public static String method4(String message) {
 		return message;
 	}
+	//method name:method4
+	//return type:String
+	//parameters:String message
 	
 	public static void method5(String message, int num) {
 		System.out.println(message+num);
 	}
+	//method name:method5
+	//return type:void
+	//parameters:String messsage,int num
 }
