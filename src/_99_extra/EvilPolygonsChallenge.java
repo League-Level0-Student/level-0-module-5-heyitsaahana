@@ -18,7 +18,7 @@ public class EvilPolygonsChallenge {
 		//3. Use if statements to check the the value of colorChoice and set the pen color accordingly 
 		
 		//4. Ask the use how many polygons they want to be drawn.
-		
+		String x=JOptionPane.showInputDialog("How many polygonsdo you want to be drawn?");
 		//5. Use the robot to draw the number of polygons the user requested.
 		
 		//6. Make it so your shapes do not overlap
